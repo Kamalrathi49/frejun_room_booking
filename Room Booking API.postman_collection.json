@@ -1,0 +1,1935 @@
+{
+	"info": {
+		"_postman_id": "b183c70b-8962-485b-93a9-5f8aa08b286e",
+		"name": "Room Booking API",
+		"description": "Postman collection for Virtual Workspace Room Booking System (UUID-based)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27510042"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"kamal1\",\n  \"password\": \"kamal\",\n  \"confirm_password\": \"kamal\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/auth/signup/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"auth",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"kamal1\",\n  \"password\": \"kamal\",\n  \"confirm_password\": \"kamal\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/auth/signup/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"auth",
+										"signup",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:02:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"kamal\",\n  \"password\": \"kamal\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/auth/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"kamal\",\n  \"password\": \"kamal\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/auth/login/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:06:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MDY5NDgwMywiaWF0IjoxNzUwNjA4NDAzLCJqdGkiOiI0OTY0OGY4NzUyOWU0ZjQxYTJmMjA2Njg2MzhiYWY2NCIsInVzZXJfaWQiOjN9.70UlVMZKFbLOH6-ccKDGEtmyAx0ChMkMbfy-f4H6lB4\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjEwMjAzLCJpYXQiOjE3NTA2MDg0MDMsImp0aSI6IjRhNjdkNzY2ODUyNDRkYWNhMjE0MzZjZTgyMmM1MzA1IiwidXNlcl9pZCI6M30.K7gRKEQqbKZVD7vjA2UGgXRa_kY2ef-OVCPHm-j_MIM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/users/{{user_uuid}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"users",
+								"{{user_uuid}}",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:22:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"0eaa127b-89f4-4d44-bbc3-489f641e9f70\",\n    \"username\": \"kamal\",\n    \"email\": \"\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"date_of_birth\": null,\n    \"date_joined\": \"2025-06-22T16:01:22.583644Z\",\n    \"gender\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjEwMjAzLCJpYXQiOjE3NTA2MDg0MDMsImp0aSI6IjRhNjdkNzY2ODUyNDRkYWNhMjE0MzZjZTgyMmM1MzA1IiwidXNlcl9pZCI6M30.K7gRKEQqbKZVD7vjA2UGgXRa_kY2ef-OVCPHm-j_MIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"kamal\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"kamal\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:31:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"0eaa127b-89f4-4d44-bbc3-489f641e9f70\",\n    \"username\": \"kamal\",\n    \"email\": \"\",\n    \"first_name\": \"kamal\",\n    \"last_name\": \"\",\n    \"date_of_birth\": null,\n    \"date_joined\": \"2025-06-22T16:01:22.583644Z\",\n    \"gender\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rom booking",
+			"item": [
+				{
+					"name": "Book Private Room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE0MzAyLCJpYXQiOjE3NTA2MTA3MDIsImp0aSI6IjlkMGMxMjFmZDVkMDQyOTc4OGZkY2U4ZGM1YWFkNDNlIiwidXNlcl9pZCI6MX0.fkGQHV-BOWzACxAdMTzSrNZ7A8MNdXHmRIlTzZpjYHg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"room_id\": \"57493eb6-f651-4b36-8495-962d74b57ded\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"09:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"room_id\": \"57493eb6-f651-4b36-8495-962d74b57ded\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"09:00:00\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/bookings/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"bookings",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:49:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"booking_id\": \"5fc5c489-5df3-472e-8054-75055c02bbc4\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"room_id\": \"57493eb6-f651-4b36-8495-962d74b57ded\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"09:00:00\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/bookings/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"bookings",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:55:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"No available room for the selected slot and type.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Book Conference Room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE3MTIyLCJpYXQiOjE3NTA2MTM1MjIsImp0aSI6IjA4NTM4ZGUwMmQ1YTQwNzliOWI0MWRlYWZlY2JhZDJkIiwidXNlcl9pZCI6MX0.x7nLoFxJ7nMAU2K5oi7Yv3SPQbySZ2oZCG0kUqvEK7A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"room_id\": \"9bf4f527-28ce-465f-8362-cafda3001504\",\n  \"team_id\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"10:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"room_id\": \"9bf4f527-28ce-465f-8362-cafda3001504\",\n  \"team_id\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"10:00:00\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:33:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"booking_id\": \"4185cb0b-8034-41b8-9c35-d3ccd6fcb43d\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Book Shared Desk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"room_id\": \"{{shared_desk_uuid}}\",\n  \"date\": \"2024-07-01\",\n  \"slot\": \"11:00:00\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE0MzAyLCJpYXQiOjE3NTA2MTA3MDIsImp0aSI6IjlkMGMxMjFmZDVkMDQyOTc4OGZkY2U4ZGM1YWFkNDNlIiwidXNlcl9pZCI6MX0.fkGQHV-BOWzACxAdMTzSrNZ7A8MNdXHmRIlTzZpjYHg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/bookings/5fc5c489-5df3-472e-8054-75055c02bbc4/cancel/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"bookings",
+								"5fc5c489-5df3-472e-8054-75055c02bbc4",
+								"cancel",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/bookings/5fc5c489-5df3-472e-8054-75055c02bbc4/cancel/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"bookings",
+										"5fc5c489-5df3-472e-8054-75055c02bbc4",
+										"cancel",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:55:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Booking cancelled.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List All Bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE0MzAyLCJpYXQiOjE3NTA2MTA3MDIsImp0aSI6IjlkMGMxMjFmZDVkMDQyOTc4OGZkY2U4ZGM1YWFkNDNlIiwidXNlcl9pZCI6MX0.fkGQHV-BOWzACxAdMTzSrNZ7A8MNdXHmRIlTzZpjYHg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/bookings/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"bookings",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:05:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"uuid\": \"d6daa2ce-5f73-4c23-8225-41f6308669fe\",\n        \"room\": {\n            \"uuid\": \"57493eb6-f651-4b36-8495-962d74b57ded\",\n            \"name\": \"Private Room 1\",\n            \"room_type\": \"private\",\n            \"capacity\": 1,\n            \"description\": \"\"\n        },\n        \"team\": null,\n        \"date\": \"2024-07-01\",\n        \"slot\": \"09:00:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List Available Rooms (all)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjEwMjAzLCJpYXQiOjE3NTA2MDg0MDMsImp0aSI6IjRhNjdkNzY2ODUyNDRkYWNhMjE0MzZjZTgyMmM1MzA1IiwidXNlcl9pZCI6M30.K7gRKEQqbKZVD7vjA2UGgXRa_kY2ef-OVCPHm-j_MIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/rooms/available/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"rooms",
+								"available",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/rooms/available/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"rooms",
+										"available",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:32:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1883"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"5897efba-31b0-4b4b-8546-2de32549a935\",\n        \"name\": \"Private Room 1\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"1bd9b969-aa9d-4d2e-aeee-d407fafcbfc6\",\n        \"name\": \"Private Room 2\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"440924b8-a1ea-429d-8850-43d96c98eef9\",\n        \"name\": \"Private Room 3\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"7e67e7a6-bfd1-43ef-9dea-df5b4b8e827d\",\n        \"name\": \"Private Room 4\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"b4b01f0c-ba03-454f-abc5-6efc53999f8f\",\n        \"name\": \"Private Room 5\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"2ed1b643-34b8-481a-b68a-122c83a05559\",\n        \"name\": \"Private Room 6\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"b0ce6e0a-a1cc-44da-bc8a-f6a5537f26ac\",\n        \"name\": \"Private Room 7\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"a4e58ae3-b1bb-433d-b42b-e5bdb247849f\",\n        \"name\": \"Private Room 8\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"1702be36-0ca5-406c-94d5-af04715e0f37\",\n        \"name\": \"Conference Room 1\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"24c0d4e2-767c-4f59-a168-cfd9d02c9722\",\n        \"name\": \"Conference Room 2\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"fb9f67d4-88d0-4a6f-9dbf-1b6ab831ac30\",\n        \"name\": \"Conference Room 3\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"27ff08cd-0ec2-492b-abba-a58c806da0e1\",\n        \"name\": \"Conference Room 4\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"8e430ab2-952b-4b03-bb3d-b36c2235ca5c\",\n        \"name\": \"Shared Desk 1\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"16134c75-2fae-4f26-b88c-80722113e8d8\",\n        \"name\": \"Shared Desk 2\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"60c598e0-49c5-43a9-97d1-cd42e0db424b\",\n        \"name\": \"Shared Desk 3\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List Available Rooms (filtered)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE3MTIyLCJpYXQiOjE3NTA2MTM1MjIsImp0aSI6IjA4NTM4ZGUwMmQ1YTQwNzliOWI0MWRlYWZlY2JhZDJkIiwidXNlcl9pZCI6MX0.x7nLoFxJ7nMAU2K5oi7Yv3SPQbySZ2oZCG0kUqvEK7A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/rooms/available/?date=2024-07-01&slot=09:00:00",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"rooms",
+								"available",
+								""
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-07-01"
+								},
+								{
+									"key": "slot",
+									"value": "09:00:00"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/rooms/available/?date=2024-07-01&slot=09:00:00",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"rooms",
+										"available",
+										""
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2024-07-01"
+										},
+										{
+											"key": "slot",
+											"value": "09:00:00"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 16:31:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1883"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"5897efba-31b0-4b4b-8546-2de32549a935\",\n        \"name\": \"Private Room 1\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"1bd9b969-aa9d-4d2e-aeee-d407fafcbfc6\",\n        \"name\": \"Private Room 2\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"440924b8-a1ea-429d-8850-43d96c98eef9\",\n        \"name\": \"Private Room 3\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"7e67e7a6-bfd1-43ef-9dea-df5b4b8e827d\",\n        \"name\": \"Private Room 4\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"b4b01f0c-ba03-454f-abc5-6efc53999f8f\",\n        \"name\": \"Private Room 5\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"2ed1b643-34b8-481a-b68a-122c83a05559\",\n        \"name\": \"Private Room 6\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"b0ce6e0a-a1cc-44da-bc8a-f6a5537f26ac\",\n        \"name\": \"Private Room 7\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"a4e58ae3-b1bb-433d-b42b-e5bdb247849f\",\n        \"name\": \"Private Room 8\",\n        \"room_type\": \"private\",\n        \"capacity\": 1,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"1702be36-0ca5-406c-94d5-af04715e0f37\",\n        \"name\": \"Conference Room 1\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"24c0d4e2-767c-4f59-a168-cfd9d02c9722\",\n        \"name\": \"Conference Room 2\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"fb9f67d4-88d0-4a6f-9dbf-1b6ab831ac30\",\n        \"name\": \"Conference Room 3\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"27ff08cd-0ec2-492b-abba-a58c806da0e1\",\n        \"name\": \"Conference Room 4\",\n        \"room_type\": \"conference\",\n        \"capacity\": 10,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"8e430ab2-952b-4b03-bb3d-b36c2235ca5c\",\n        \"name\": \"Shared Desk 1\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"16134c75-2fae-4f26-b88c-80722113e8d8\",\n        \"name\": \"Shared Desk 2\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    },\n    {\n        \"uuid\": \"60c598e0-49c5-43a9-97d1-cd42e0db424b\",\n        \"name\": \"Shared Desk 3\",\n        \"room_type\": \"shared\",\n        \"capacity\": 4,\n        \"description\": \"\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Create Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE2MTI5LCJpYXQiOjE3NTA2MTI1MjksImp0aSI6IjEzMTg4ODM2ZDhkYTRlYWFiYTY5OTI1ZDE0MmIwZjI3IiwidXNlcl9pZCI6MX0.8o6DBMHP9eWRc2sNjsmRu50a_1rLQyaWVnFjh7l1beY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Team Alpha\",\n  \"description\": \"Optional description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/teams/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"teams",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Team Alpha\",\n  \"description\": \"Optional description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/teams/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"teams",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:15:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\",\n    \"name\": \"Team Alpha\",\n    \"description\": \"Optional description\",\n    \"members\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE2MTI5LCJpYXQiOjE3NTA2MTI1MjksImp0aSI6IjEzMTg4ODM2ZDhkYTRlYWFiYTY5OTI1ZDE0MmIwZjI3IiwidXNlcl9pZCI6MX0.8o6DBMHP9eWRc2sNjsmRu50a_1rLQyaWVnFjh7l1beY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/teams/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"teams",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/teams/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"teams",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:23:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "236"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\",\n        \"name\": \"Team Alpha\",\n        \"description\": \"Optional description\",\n        \"members\": [\n            {\n                \"uuid\": \"d2da0b6b-3393-423d-a7c7-cbe42226da57\",\n                \"name\": \"Alice\",\n                \"age\": 28,\n                \"gender\": \"female\",\n                \"email\": \"alice@example.com\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "members",
+			"item": [
+				{
+					"name": "Add member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE2MTI5LCJpYXQiOjE3NTA2MTI1MjksImp0aSI6IjEzMTg4ODM2ZDhkYTRlYWFiYTY5OTI1ZDE0MmIwZjI3IiwidXNlcl9pZCI6MX0.8o6DBMHP9eWRc2sNjsmRu50a_1rLQyaWVnFjh7l1beY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Alice\",\n  \"age\": 28,\n  \"gender\": \"female\",\n  \"email\": \"alice3@example.com\",\n  \"team\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/members/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"members",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Alice\",\n  \"age\": 28,\n  \"gender\": \"female\",\n  \"email\": \"alice@example.com\",\n  \"team\": \"18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/members/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"members",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:22:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"d2da0b6b-3393-423d-a7c7-cbe42226da57\",\n    \"name\": \"Alice\",\n    \"age\": 28,\n    \"gender\": \"female\",\n    \"email\": \"alice@example.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List all members",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE2MTI5LCJpYXQiOjE3NTA2MTI1MjksImp0aSI6IjEzMTg4ODM2ZDhkYTRlYWFiYTY5OTI1ZDE0MmIwZjI3IiwidXNlcl9pZCI6MX0.8o6DBMHP9eWRc2sNjsmRu50a_1rLQyaWVnFjh7l1beY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/members/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"members",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/members/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"members",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:26:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"3dd650b8-2aae-409c-af28-92e5cc7e49ae\",\n        \"name\": \"Alice\",\n        \"age\": 28,\n        \"gender\": \"female\",\n        \"email\": \"alice1@example.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List team members",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwNjE2MTI5LCJpYXQiOjE3NTA2MTI1MjksImp0aSI6IjEzMTg4ODM2ZDhkYTRlYWFiYTY5OTI1ZDE0MmIwZjI3IiwidXNlcl9pZCI6MX0.8o6DBMHP9eWRc2sNjsmRu50a_1rLQyaWVnFjh7l1beY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bookings/members/?team=18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"members",
+								""
+							],
+							"query": [
+								{
+									"key": "team",
+									"value": "18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/bookings/members/?team=18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bookings",
+										"members",
+										""
+									],
+									"query": [
+										{
+											"key": "team",
+											"value": "18d6cf3d-dd27-4ddf-a9c1-82ea51352fd4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:28:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"3dd650b8-2aae-409c-af28-92e5cc7e49ae\",\n        \"name\": \"Alice\",\n        \"age\": 28,\n        \"gender\": \"female\",\n        \"email\": \"alice1@example.com\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "access_token",
+			"value": ""
+		},
+		{
+			"key": "private_room_uuid",
+			"value": ""
+		},
+		{
+			"key": "conference_room_uuid",
+			"value": ""
+		},
+		{
+			"key": "shared_desk_uuid",
+			"value": ""
+		},
+		{
+			"key": "team_uuid",
+			"value": ""
+		},
+		{
+			"key": "member1_uuid",
+			"value": ""
+		},
+		{
+			"key": "member2_uuid",
+			"value": ""
+		},
+		{
+			"key": "member3_uuid",
+			"value": ""
+		},
+		{
+			"key": "booking_uuid",
+			"value": ""
+		},
+		{
+			"key": "user_uuid",
+			"value": ""
+		}
+	]
+}
