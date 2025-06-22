@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+.DS_Store
+.env
+.env.*
+
+# Virtualenv
+venv/
+ENV/
+.envrc
+
+# Static/media
+staticfiles/
+media/
+
+# VSCode
+.vscode/
+
+# Docker
+*.pid
+
+# Do NOT ignore migrations!
+# apps/*/migrations/ is tracked intentionally 
